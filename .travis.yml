@@ -4,13 +4,7 @@ node_js:
 env:
   global:
     # GH_TOKEN
-    - secure: "Hxg4dE7Yfk6rykyLX+BK0qx0Vk7vO6W2w2dm6p62pnfvHLD/jWZX8Y5U6x0F/tal/Hvfv+pXWZeCX83y7Ergmf3CEJoz4YKmyXn7jfodEcArfbt/hW9WR63H7uPEbCpF9TwhXjd5jw/ZfOOD+CzTcNnD+VcBl+9ImXh+ZFf3ASM="
-matrix:
-  include:
-    - node_js: "0.10"
-    - node_js: "0.12"
-    - node_js: "io.js"
-      env: SAUCE_LABS=true
+    - secure: "PbmvGYY0aJGmMcdq1vhIGIYQKYJCePRs1M0qWG/I3Yd2amvFFHe3Onzqp0D+KS2pnWnBkKrYQsrnPHaaJEg38piT4Q8u8Qi2LO9qc/tgjnvF/WicMqXAAp2JVA+5aEJpHHJT06bTo77Utfd1osRqqZq64hu2SoiSrtvDtp1ZHUQ="
 before_script:
   - git config --global user.email "hello+travis@dominykas.com"
   - git config --global user.name "Travis-CI (dominykas)"
@@ -19,6 +13,6 @@ deploy:
     skip_cleanup: true
     email: "hello@dominykas.com"
     api_key:
-      secure: "a/thAOxosaoSYL2SF7TyE9z2k7dmN8z2LLEpvhqydFc2nhBuwlC3geeE0Oejq4XpC3SdkGLApnUIjyfcE5joZiUw6uDM5qCc5nE+83/9RFbRBmiOAPTx+piP9Wyi3fMz54W0CGt3N+EYW5AzAeBcRm2KBjWJB0GUwic2VEtMcSc="
+      secure: "evh8vXg4Y5L6+opc1/22Aiqrrxfmc9Dpj93eroqAoZX3haDtjZdJDaAxg+vlJLe8OzLODZe8XYkb7SapiRfeA3kJzk3CZD01Wi2wogCB2/ips8QKw8ISInUmAp72rBSvwZzqGy3PSsROsJjMhvfVlGKQgH01mjJJ/q8PL1DNkMk="
     on:
       tags: true
