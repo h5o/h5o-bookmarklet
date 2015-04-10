@@ -4,7 +4,7 @@
   "description": "HTML5 outliner (bookmarklet)",
   "main": "bookmarklet.js",
   "scripts": {
-    "prepublish": "in-publish && [ ! -z $TRAVIS_TAG ] && ls dist/*.crx || in-install",
+    "prepublish": "in-publish && [ ! -z $TRAVIS_TAG ] && ls dist/bookmarklet.html || in-install",
     "postpublish": "grunt gh-pages",
     "test": "grunt"
   },
