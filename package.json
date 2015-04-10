@@ -1,11 +1,14 @@
 {
   "name": "h5o-bookmarklet",
-  "version": "0.0.0",
+  "version": "0.11.0",
   "description": "HTML5 outliner (bookmarklet)",
-  "main": "index.js",
+  "main": "bookmarklet.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "in-publish && [ ! -z $TRAVIS_TAG ] && ls dist/*.crx || in-install",
+    "postpublish": "grunt gh-pages",
+    "test": "grunt"
   },
+  "files": [ "dist/bookmarklet.html" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/h5o/h5o-bookmarklet.git"
@@ -30,7 +33,6 @@
     "grunt-cli": "0.1.x",
     "grunt-contrib-clean": "0.6.x",
     "grunt-contrib-uglify": "0.9.x",
-    "grunt-contrib-watch": "0.6.x",
     "grunt-gh-pages": "0.10.x",
     "h5o": "0.10.x",
     "in-publish": "1.x",
