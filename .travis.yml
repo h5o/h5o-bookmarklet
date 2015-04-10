@@ -4,7 +4,7 @@ node_js:
 env:
   global:
     # GH_TOKEN
-    - secure: "PbmvGYY0aJGmMcdq1vhIGIYQKYJCePRs1M0qWG/I3Yd2amvFFHe3Onzqp0D+KS2pnWnBkKrYQsrnPHaaJEg38piT4Q8u8Qi2LO9qc/tgjnvF/WicMqXAAp2JVA+5aEJpHHJT06bTo77Utfd1osRqqZq64hu2SoiSrtvDtp1ZHUQ="
+    - secure: "TCOqlA20ByGHd7MBuT0Has/O3nGPcsWBEWKZF6/XQZzr+93Chu4wB2n9YGEMotu06UexKFFdKqFWbKMbPDcDOMPGKM5Ofu38/NvIpOJNqukLTIsTeS3rTTaOqL2GgriHMXiopJq9vQwGrNc+VP1VHMmzB8H1FrGKAUoDzzHbBjk="
 before_script:
   - git config --global user.email "hello+travis@dominykas.com"
   - git config --global user.name "Travis-CI (dominykas)"
