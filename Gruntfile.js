@@ -11,8 +11,8 @@ module.exports = function (grunt) {
 		},
 		"uglify": {
 			"bookmarklet-js": {
-				"src": ["dist/debug/bookmarklet.debug.js"],
-				"dest": "dist/debug/bookmarklet.min.js"
+				"src": ["dist/bookmarklet.debug.js"],
+				"dest": "dist/bookmarklet.min.js"
 			}
 		},
 		"gh-pages": {
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 				"src": [
 					"bookmarklet.js"
 				],
-				"dest": "dist/debug/bookmarklet.debug.js",
+				"dest": "dist/bookmarklet.debug.js",
 				"options": {
 					"transform": [
 						function (fileName) {
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
 		ejs.renderFile("bookmarklet.html.ejs", {
 
 			version: VERSION,
-			bookmarklet: encodeURIComponent(fs.readFileSync("dist/debug/bookmarklet.debug.js").toString())
+			bookmarklet: encodeURIComponent(fs.readFileSync("dist/bookmarklet.min.js").toString())
 
 		}, function (err, bookmarklet) {
 			if (err) grunt.fail.fatal(err);

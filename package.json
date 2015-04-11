@@ -2,13 +2,15 @@
   "name": "h5o-bookmarklet",
   "version": "0.11.2",
   "description": "HTML5 outliner (bookmarklet)",
-  "main": "bookmarklet.js",
+  "main": "dist/bookmarklet.min.js",
   "scripts": {
     "prepublish": "in-publish && [ ! -z $TRAVIS_TAG ] && ls dist/bookmarklet.html || in-install",
     "postpublish": "grunt gh-pages",
     "test": "grunt"
   },
   "files": [
+    "dist/bookmarklet.debug.js",
+    "dist/bookmarklet.min.js",
     "dist/bookmarklet.html"
   ],
   "repository": {
