@@ -1,0 +1,44 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+	font-family: Verdana, sans-serif;
+}
+
+a {
+	color: #008;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.h5o-close {
+	float: right;
+	margin: 0 0 5px 5px;
+	padding: 5px;
+	border: 1px #008 solid;
+	color: #00f;
+	background-color: #ccf;
+	cursor: pointer;
+}
+.h5o-close:hover {
+	background-color: transparent;
+}
+
+.h5o-container {
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	padding: 15px;
+}
+
+.h5o-container ol {
+	margin: 0;
+	padding: 0;
+}
+
+.h5o-container li {
+	list-style: decimal outside;
+	margin-left: 20px;
+}

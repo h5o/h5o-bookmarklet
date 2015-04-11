@@ -8,7 +8,9 @@
     "postpublish": "grunt gh-pages",
     "test": "grunt"
   },
-  "files": [ "dist/bookmarklet.html" ],
+  "files": [
+    "dist/bookmarklet.html"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/h5o/h5o-bookmarklet.git"
@@ -24,6 +26,7 @@
   },
   "homepage": "https://github.com/h5o/h5o-bookmarklet",
   "devDependencies": {
+    "cssify": "0.7.x",
     "ejs": "2.x",
     "grunt": "0.4.x",
     "grunt-browserify": "3.x",

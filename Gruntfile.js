@@ -29,13 +29,20 @@ module.exports = function (grunt) {
 				"src": [
 					"bookmarklet.js"
 				],
-				"dest": "dist/debug/bookmarklet.debug.js"
+				"dest": "dist/debug/bookmarklet.debug.js",
+				"options": {
+					"transform": [
+						function (fileName) {
+							return require("cssify")(fileName, {"auto-inject": false});
+						}
+					]
+				}
 			}
 		},
 		"bump": {
 			"options": {
 				commitMessage: 'release %VERSION%',
-				commitFiles: [ "-a" ],
+				commitFiles: ["-a"],
 				tagName: '%VERSION%',
 				tagMessage: 'version %VERSION%',
 				pushTo: 'origin'
