@@ -24,8 +24,6 @@ var IFRAME_STYLE = '' +
 
 var outlineHTML = HTML5Outline(document.body).asHTML(true);
 
-outlineHTML+="<div>W3C version of the outlining algorithm W3C version of the outlining algorithm </div>"
-
 var containerDiv = document.createElement('div');
 setAttribute([containerDiv], "class", "h5o-container");
 containerDiv.innerHTML = outlineHTML;

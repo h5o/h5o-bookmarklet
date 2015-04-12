@@ -7,6 +7,9 @@ See [h5o/h5o-js](https://github.com/h5o/h5o-js) for the outlining code library, 
 ### vNext (????-??-??) ###
 * ???
 
+### v0.12.2 (2015-04-12) ###
+* Oops - debug info left
+
 ### v0.12.1 (2015-04-12) ###
 * Attempt at better autosizing
 
