@@ -17,11 +17,14 @@ var IFRAME_STYLE = '' +
 	'border:' + IFRAME_BORDER_SIZE + 'px solid #000;' +
 	'background:rgba(255,255,255,.9);' +
 	'z-index:999999;' +
+	'width:90%;' +
 	'max-width:90%;' +
 	'max-width:calc(100% - 20px);' +
 	'min-height:50px;';
 
 var outlineHTML = HTML5Outline(document.body).asHTML(true);
+
+outlineHTML+="<div>W3C version of the outlining algorithm W3C version of the outlining algorithm </div>"
 
 var containerDiv = document.createElement('div');
 setAttribute([containerDiv], "class", "h5o-container");
@@ -43,8 +46,10 @@ Iframeish(function (err, iframeish) {
 	setAttribute([iframeish.iframe], "style", IFRAME_STYLE);
 	iframeish.document.body.appendChild(containerDiv);
 
-	iframeish.iframe.style.width = containerDiv.scrollWidth + "px";
+	containerDiv.style.position = "absolute"; // shrink in width
+	iframeish.iframe.style.width = (containerDiv.scrollWidth + IFRAME_BORDER_SIZE) + "px";
 	iframeish.iframe.style.height = (containerDiv.scrollHeight + IFRAME_BORDER_SIZE) + "px";
+	containerDiv.style.position = "static"; // restore width
 
 	lnk.addEventListener("click", function () {
 		document.body.removeChild(iframeish.iframe);
