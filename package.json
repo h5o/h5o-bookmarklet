@@ -1,6 +1,6 @@
 {
   "name": "h5o-bookmarklet",
-  "version": "0.11.3",
+  "version": "0.12.0",
   "description": "HTML5 outliner (bookmarklet)",
   "main": "dist/bookmarklet.min.js",
   "scripts": {
