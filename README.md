@@ -7,6 +7,9 @@ See [h5o/h5o-js](https://github.com/h5o/h5o-js) for the outlining code library, 
 ### vNext (????-??-??) ###
 * ???
 
+### v0.12.1 (2015-04-12) ###
+* Attempt at better autosizing
+
 ### v0.12.0 (2015-04-12) ###
 * Bookmarklet now automatically resizes itself to take as much as space as needed by the content
 
