@@ -1,7 +1,7 @@
 var HTML5Outline = require("h5o"),
 	cssify = require("cssify"),
 	bookmarkletCss = require("./bookmarklet.css"),
-	Iframeish = require("./Iframeish");
+	Iframeish = require("iframeish");
 
 var setAttribute = function (els, attr, val) {
 	for (var i = 0; i < els.length; i++) {
