@@ -1,7 +1,6 @@
 language: node_js
 sudo: false
-node_js:
-  - node_js: "iojs-v2.5.0"
+node_js: "iojs-v2.5.0"
 env:
   global:
     # GH_TOKEN

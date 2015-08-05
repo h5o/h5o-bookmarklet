@@ -7,7 +7,7 @@ See [h5o/h5o-js](https://github.com/h5o/h5o-js) for the outlining code library, 
 ### vNext (????-??-??) ###
 * ???
 
-### v0.12.3 (2015-08-05) ###
+### v0.12.4 (2015-08-05) ###
 * https://www.npmjs.com/package/iframeish
 * https://github.com/h5o/h5o-js/issues/32
 
