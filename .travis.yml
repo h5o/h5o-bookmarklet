@@ -1,6 +1,7 @@
 language: node_js
+sudo: false
 node_js:
-  - "io.js"
+  - node_js: "iojs-v2.5.0"
 env:
   global:
     # GH_TOKEN
@@ -13,6 +14,6 @@ deploy:
     skip_cleanup: true
     email: "hello@dominykas.com"
     api_key:
-      secure: "evh8vXg4Y5L6+opc1/22Aiqrrxfmc9Dpj93eroqAoZX3haDtjZdJDaAxg+vlJLe8OzLODZe8XYkb7SapiRfeA3kJzk3CZD01Wi2wogCB2/ips8QKw8ISInUmAp72rBSvwZzqGy3PSsROsJjMhvfVlGKQgH01mjJJ/q8PL1DNkMk="
+      secure: "aRkpCPJ3eYimw0fkbuTq06M1ldP3bxu7Cvq2MzUEk7YCwTIMl8jBi8JV2N6fPC37eCcerlI/sAavi6eL7p89ybKc8s58MvDiKlLLhx3jVxb5taBIX0o2Gn+V/2r5foyVzLGlAPGswU9K6SH6D12GqIKkkJpw8N75ND+z9SRB4Lw="
     on:
       tags: true
