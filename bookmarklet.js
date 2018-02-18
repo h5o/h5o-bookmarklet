@@ -10,9 +10,10 @@ var setAttribute = function (els, attr, val) {
 };
 
 var IFRAME_BORDER_SIZE = 2;
+var IFRAME_VERTICAL_MARGIN = 10;
 var IFRAME_STYLE = '' +
 	'position:fixed;' +
-	'top:10px;' +
+	'top:' + IFRAME_VERTICAL_MARGIN + 'px;' +
 	'right:10px;' +
 	'border:' + IFRAME_BORDER_SIZE + 'px solid #000;' +
 	'background:rgba(255,255,255,.9);' +
@@ -46,7 +47,9 @@ Iframeish(function (err, iframeish) {
 
 	containerDiv.style.position = "absolute"; // shrink in width
 	iframeish.iframe.style.width = (containerDiv.scrollWidth + IFRAME_BORDER_SIZE) + "px";
-	iframeish.iframe.style.height = (containerDiv.scrollHeight + IFRAME_BORDER_SIZE) + "px";
+	var maxIframeHeight = window.innerHeight - IFRAME_VERTICAL_MARGIN * 2;
+	var iframeHeight = Math.min(containerDiv.scrollHeight + IFRAME_BORDER_SIZE * 2, maxIframeHeight);
+	iframeish.iframe.style.height = iframeHeight + "px";
 	containerDiv.style.position = "static"; // restore width
 
 	lnk.addEventListener("click", function () {
