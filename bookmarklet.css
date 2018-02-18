@@ -15,7 +15,7 @@ a:hover {
 }
 
 .h5o-close {
-	position: absolute;
+	position: fixed;
 	top: 15px;
 	right: 15px;
 	padding: 5px;
