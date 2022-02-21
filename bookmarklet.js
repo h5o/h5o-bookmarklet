@@ -10,17 +10,20 @@ var setAttribute = function (els, attr, val) {
 };
 
 var IFRAME_BORDER_SIZE = 2;
+var IFRAME_POSITION = 10;
+var IFRAME_PADDING = 15;
 var IFRAME_STYLE = '' +
 	'position:fixed;' +
-	'top:10px;' +
-	'right:10px;' +
+	'top:' + IFRAME_POSITION + 'px;' +
+	'right:' + IFRAME_POSITION + 'px;' +
 	'border:' + IFRAME_BORDER_SIZE + 'px solid #000;' +
 	'background:rgba(255,255,255,.9);' +
 	'z-index:999999;' +
 	'width:90%;' +
 	'max-width:90%;' +
 	'max-width:calc(100% - 20px);' +
-	'min-height:50px;';
+	'min-height:50px;'+
+	'padding: ' + IFRAME_PADDING + 'px 0 ' + IFRAME_PADDING + 'px ' + IFRAME_PADDING + 'px;';
 
 var outlineHTML = HTML5Outline(document.body).asHTML(true);
 
@@ -45,8 +48,16 @@ Iframeish(function (err, iframeish) {
 	iframeish.document.body.appendChild(containerDiv);
 
 	containerDiv.style.position = "absolute"; // shrink in width
+
+	// Prevent displaying content past the browser window's vertical limit
+	var verticalClearance = IFRAME_PADDING + IFRAME_BORDER_SIZE + IFRAME_POSITION;
+	var availableWindowHeight = window.innerHeight - verticalClearance;
+	var containerDivHeight = containerDiv.scrollHeight + verticalClearance + 10;
+	if (containerDivHeight > availableWindowHeight)
+		containerDivHeight = availableWindowHeight;
+
 	iframeish.iframe.style.width = (containerDiv.scrollWidth + IFRAME_BORDER_SIZE) + "px";
-	iframeish.iframe.style.height = (containerDiv.scrollHeight + IFRAME_BORDER_SIZE) + "px";
+	iframeish.iframe.style.height = containerDivHeight + "px";
 	containerDiv.style.position = "static"; // restore width
 
 	lnk.addEventListener("click", function () {

@@ -15,7 +15,7 @@ a:hover {
 }
 
 .h5o-close {
-	position: absolute;
+	position: fixed;
 	top: 15px;
 	right: 15px;
 	padding: 5px;
@@ -33,7 +33,6 @@ a:hover {
 	white-space: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
-	padding: 15px 60px 15px 15px;
 }
 
 .h5o-container ol {
